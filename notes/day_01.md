@@ -45,17 +45,20 @@ Sprint 4 → Payment
 
 3. Agile Manifesto
 4 Core Values
+
 Individuals & interactions over processes & tools
 Working software over comprehensive documentation
 Customer collaboration over contract negotiation
 Responding to change over following a plan
+
 Training Takeaway
 
 Agile = People + Collaboration + Working Software + Adaptability
 
 4. 12 Agile Principles – High Level
 
-Students don't need to memorize all 12 initially. Understand the key ideas:
+Students don't need to memorize all 12 initially. 
+Understand the key ideas:
 
 Deliver software frequently.
 Focus on customer satisfaction.
@@ -73,17 +76,19 @@ Corporate Connection
 
 These principles appear in day-to-day activities such as:
 
-Requirement Change → Backlog Update → Sprint Planning → Development → Testing → Demo → Feedback
+Requirement Change → 
+Backlog Update → 
+Sprint Planning → Development → Testing → Demo → Feedback
 
 5. Scrum
 Scrum is a popular Agile framework.
-Provides a structured way for teams to develop products.
+Provides a structured way for teams to develop products or software.
 Work is organized into Sprints.
 Sprint is usually 1–4 weeks.
 Each Sprint aims to produce a usable product Increment.
 Scrum Flow
 
-Product Backlog
+Product Backlog (application features like login page, signup page,dashboard etc)
 ↓
 Sprint Planning
 ↓
@@ -118,7 +123,8 @@ Promotes continuous improvement.
 Think:
 "How can the team work better?"
 
-Developers
+Developers or Scrum team 
+
 Design and build the product.
 Write code.
 Test functionality.
@@ -130,6 +136,7 @@ Think:
 "How do we build it?"
 
 7. Scrum Events
+
 Sprint Planning
 Decide what to work on during the Sprint.
 Define Sprint Goal.
@@ -169,7 +176,8 @@ As a [user], I want [feature], so that [benefit].
 
 Example
 
-As a customer, I want to add products to my cart so that I can purchase multiple products together.
+As a customer, I want to add products to my cart so that I 
+can purchase multiple products together.
 
 Students Should Understand
 
@@ -182,7 +190,7 @@ Helps testers create test cases.
 Helps Product Owner determine whether the story meets expectations.
 Example
 
-User Story: Add product to cart.
+User Story: Add product to cart and place the order. 
 
 Acceptance Criteria:
 
@@ -191,23 +199,27 @@ Selected product appears in cart.
 Product quantity can be updated.
 Cart displays correct total price.
 User receives an appropriate message when the product is unavailable.
+
 10. Product Backlog vs Sprint Backlog
 Product Backlog
-Complete list of product requirements/work.
+Complete list of product requirements/work (features)
 Managed and prioritized by Product Owner.
 Can change as product needs change.
+
 Sprint Backlog
 Work selected for the current Sprint.
 Developers use it to plan and track Sprint work.
+
 Easy Way to Remember
 
-Product Backlog = Everything
+Product Backlog = Everything for the whole project or module of the project 
 
 Sprint Backlog = Current Sprint Work
 
 11. Jira – Corporate Tool Introduction
 
-Jira is commonly used by Agile teams to manage and track software development work.
+Jira is commonly used by Agile teams to 
+manage and track software development work.
 
 Jira Concepts
 Project
@@ -261,6 +273,7 @@ Login API
 Database validation
 Unit testing
 Integration testing
+
 13. Corporate Scenario
 Example: E-Commerce Application
 
@@ -269,6 +282,7 @@ Business Requirement:
 Customers should be able to purchase products online.
 
 Product Backlog
+
 User Registration
 User Login
 Product Search
@@ -276,6 +290,7 @@ Product Details
 Shopping Cart
 Payment
 Order Tracking
+
 Sprint 1
 
 Sprint Goal:
@@ -353,69 +368,99 @@ Retrospective
 Next Sprint
 
 Git & GitHub – Training Notes
-1. Distributed Version Control – Basics
-Version Control System (VCS) helps developers track changes in source code.
+
+Distributed Version Control – Basics
+
+Version Control System (VCS) helps developers track 
+changes in source code.
+
 Allows developers to:
 Track code changes
 Restore previous versions
 Work on multiple features
 Collaborate with other developers
 Maintain project history
+
 Distributed Version Control System (DVCS)
-Every developer has a local copy of the repository.
+
+Every developer has a local copy of the repository(folder).
 Developers can work and commit changes offline.
 Each local repository contains project history.
 Changes can later be synchronized with a remote repository.
+
 Git
 Git is a distributed version control system.
 Created by Linus Torvalds.
 Widely used for software development and team collaboration.
+
 Simple Architecture
+
 Developer A                  Developer B
      ↓                            ↓
  Local Git Repo               Local Git Repo
      ↓                            ↓
      └────────── GitHub ──────────┘
               Remote Repo
+
 2. Git vs GitHub vs Bitbucket
+
 Git
 Version control software/tool.
 Runs on the developer's computer.
 Tracks code changes locally.
+
 GitHub
 Cloud-based platform for hosting Git repositories.
-Supports collaboration, pull requests, issues, code reviews, and CI/CD integrations.
+Supports collaboration, pull requests, issues, 
+code reviews, and CI/CD integrations.
 Bitbucket
 Platform for hosting Git repositories.
 Commonly used with Atlassian tools, such as Jira.
+
 Easy Way to Remember
 
 Git = Version Control
 GitHub/Bitbucket = Remote Repository & Collaboration Platform
+as well as other remote repository provider. 
 
 3. Installing Git
 Installation Steps
+
 Download and install Git.
+https://git-scm.com/install/windows
+
 Verify installation.
+
 Configure username.
 Configure email.
 Configure preferred editor if required.
 Verify Installation
+
 git --version
 
 Example:
 
 git version 2.x.x
-4. Basic Git Configuration
+
+to create local folder as repository please run the command as 
+git init 
+
+Basic Git Configuration
+
 Configure Username
 git config --global user.name "Your Name"
+
 Configure Email
 git config --global user.email "your@email.com"
+
 View Configuration
 git config --list
+
 Check Specific Configuration
+
 git config user.name
 git config user.email
+
 Why Configuration?
 
 Git uses the configured identity to associate commits with the developer.
