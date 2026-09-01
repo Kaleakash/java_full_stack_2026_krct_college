@@ -174,6 +174,7 @@ Objective
 Create a GitHub account and connect a local Git project to GitHub.
 
 Demo Flow
+
 Install Git
     ↓
 Create GitHub Account
@@ -290,53 +291,75 @@ git remote	Manage remote repositories
 
 
 SQL & Database – High-Level Training Notes
+
 1. Introduction to Database
+Data : raw fact 
+information : meaningful or processed data. 
+
 Database → Organized collection of related data.
+
 DBMS → Software used to create, store, retrieve, and manage data.
+Database Management System : it is a software which help to 
+store the data in table format. 
+
+RDBMS : Relational database management system. 
+
 Examples:
 MySQL
 PostgreSQL
 Oracle
 SQL Server
+
 Table → Stores data in rows and columns.
 Row → Individual record.
 Column → Attribute/field.
+
 Primary Key → Uniquely identifies each record.
 Foreign Key → Connects related tables.
+
 Example – E-Commerce Application
+
 E-Commerce Database
        │
        ├── Customers
        ├── Products
        └── Orders
+
 2. Sample Database Design
 
 We will use a simple E-Commerce Database throughout the training.
 
 Customers
-customer_id	customer_name	email	city
-101	Rahul	rahul@gmail.com	Bengaluru
-102	Priya	priya@gmail.com	Mumbai
-103	Amit	amit@gmail.com	Delhi
-104	Sneha	sneha@gmail.com	Bengaluru
-105	Kiran	kiran@gmail.com	Chennai
-106	Neha	neha@gmail.com	Bengaluru
+
+PK                          unique 
+customer_id	customer_name	email	        city
+101	        Rahul	        rahul@gmail.com	Bengaluru
+102	        Priya	        priya@gmail.com	Mumbai
+103	        Amit	        amit@gmail.com	Delhi
+104	        Sneha	        sneha@gmail.com	Bengaluru
+105	        Kiran	        kiran@gmail.com	Chennai
+106	        Neha	        neha@gmail.com	Bengaluru
+
 Products
+PK
 product_id	product_name	category	price
-201	Laptop	Electronics	60000
-202	Mouse	Electronics	800
-203	Keyboard	Electronics	1500
-204	Office Chair	Furniture	7500
-205	Headphones	Electronics	2500
-206	Desk	Furniture	10000
+201	        Laptop	        Electronics	60000
+202	        Mouse	        Electronics	800
+203	        Keyboard	    Electronics	1500
+204	        Office Chair	Furniture	7500
+205	        Headphones	    Electronics	2500
+206	        Desk	        Furniture	10000
+
 Orders
+PK auto_increment FK    FK
 order_id	customer_id	product_id	quantity	order_date
-5001	101	201	1	2026-08-01
-5002	102	204	2	2026-08-02
-5003	101	202	1	2026-08-03
-5004	103	205	1	2026-08-04
-5005	104	203	2	2026-08-05
-5006	106	206	1	2026-08-06
+5001	    101	        201	        1	        2026-08-01
+5002	    102	        204	        2	        2026-08-02
+5003	    101	        202	        1	        2026-08-03
+5004	    103	        205	        1	        2026-08-04
+5005	    104	        203	        2	        2026-08-05
+5006	    106	        206	        1	        2026-08-06
+
 Relationships
 Customers
     │
@@ -347,37 +370,54 @@ Orders
     │ product_id
     ↓
 Products
+SQL : Structured Query Language 
+5 types 
+1. DDL Data definition language : create, drop, alter, truncate etc (structure of table)
+2. DML : Data manipulation language : insert, delete and update (deal with data)
+3. DRL or DQL : Data query or retrieval language : select clause 
+4. DCL : Data control language : grant and remove etc. 
+5. TCL : transactional control language : commit, rollback and save point etc
+
 3. DDL – Data Definition Language
 
 DDL is used to create and modify the structure of database objects.
 
 Important DDL Commands
 Command	Purpose
+
 CREATE	Create database/table
 ALTER	Modify table structure
 DROP	Remove database/table
 TRUNCATE	Remove all records while keeping table structure
 CREATE DATABASE
-CREATE DATABASE ecommerce;
 
-Select the database:
+MySQL Database commands 
 
-USE ecommerce;
+show databases;        this command display all database present in current account 
+CREATE DATABASE e_commerce; it help to create new database 
+USE e_commerce;             move inside existing database. 
+show tables;            it is use to show the table. 
+
 CREATE TABLE – Customers
+
 CREATE TABLE customers (
     customer_id INT PRIMARY KEY,
     customer_name VARCHAR(100),
-    email VARCHAR(100),
+    email VARCHAR(100) unique,
     city VARCHAR(50)
 );
+
 CREATE TABLE – Products
+
 CREATE TABLE products (
     product_id INT PRIMARY KEY,
     product_name VARCHAR(100),
     category VARCHAR(50),
     price DECIMAL(10,2)
 );
+
 CREATE TABLE – Orders
+
 CREATE TABLE orders (
     order_id INT PRIMARY KEY,
     customer_id INT,
@@ -389,7 +429,12 @@ CREATE TABLE orders (
     FOREIGN KEY (product_id)
         REFERENCES products(product_id)
 );
+
+show table : to view all tables present in your account 
+desc products;  to view structure of particular table. 
+
 Important
+
 PRIMARY KEY
     ↓
 Uniquely identifies a record
@@ -397,6 +442,8 @@ Uniquely identifies a record
 FOREIGN KEY
     ↓
 Creates relationship between tables
+
+
 4. ALTER TABLE
 
 Used to modify an existing table structure.
@@ -415,6 +462,7 @@ Used to remove a table completely.
 DROP TABLE customers;
 Removes the table structure.
 Removes the data stored in the table.
+
 6. TRUNCATE TABLE
 
 Used to remove all records while keeping the table structure.
@@ -424,6 +472,7 @@ Difference
 Command	Result
 DROP	Removes table + data
 TRUNCATE	Removes data, keeps table
+
 7. DML – Data Manipulation Language
 
 DML is used to add, modify, and remove records.
@@ -432,8 +481,13 @@ Main Commands
 INSERT
 UPDATE
 DELETE
+
 8. INSERT – Add Records
 Insert Customers
+
+insert into tableName(column_Name1,columnName2) 
+value(value1,value2);
+
 INSERT INTO customers
 (customer_id, customer_name, email, city)
 VALUES
@@ -443,7 +497,9 @@ VALUES
 (104, 'Sneha', 'sneha@gmail.com', 'Bengaluru'),
 (105, 'Kiran', 'kiran@gmail.com', 'Chennai'),
 (106, 'Neha', 'neha@gmail.com', 'Bengaluru');
+
 Insert Products
+
 INSERT INTO products
 (product_id, product_name, category, price)
 VALUES
@@ -453,7 +509,9 @@ VALUES
 (204, 'Office Chair', 'Furniture', 7500),
 (205, 'Headphones', 'Electronics', 2500),
 (206, 'Desk', 'Furniture', 10000);
+
 Insert Orders
+
 INSERT INTO orders
 (order_id, customer_id, product_id, quantity, order_date)
 VALUES
@@ -463,15 +521,32 @@ VALUES
 (5004, 103, 205, 1, '2026-08-04'),
 (5005, 104, 203, 2, '2026-08-05'),
 (5006, 106, 206, 1, '2026-08-06');
+
+To view the records from a table 
+
+select * from tableName;
+
+select * from customers 
+select * from products;
+select * from orders;
+
 9. UPDATE – Modify Records
 
 Example:
+
+
+update tableName set columnName = value;
+UPDATE customers
+SET city = 'Hyderabad'
+
+update tableName set columnName = value where columnName=value;
 
 Change Rahul's city to Hyderabad.
 
 UPDATE customers
 SET city = 'Hyderabad'
 WHERE customer_id = 101;
+
 Important
 
 Always use a suitable WHERE condition.
@@ -485,8 +560,13 @@ This may update all customers.
 
 Example:
 
+delete from tableName;
+delete from customers;
+
+
 DELETE FROM customers
 WHERE customer_id = 105;
+
 Important
 
 Without WHERE:
@@ -503,26 +583,33 @@ Main command:
 
 SELECT
 SELECT – All Records
-SELECT *
-FROM customers;
+
+SELECT * FROM customers;
+
 SELECT – Specific Columns
-SELECT customer_name, city
-FROM customers;
+
+SELECT customer_name, city FROM customers;
 
 Result:
 
 customer_name	city
-Rahul	Bengaluru
-Priya	Mumbai
-Amit	Delhi
-Sneha	Bengaluru
-Kiran	Chennai
-Neha	Bengaluru
+Rahul	        Bengaluru
+Priya	        Mumbai
+Amit	        Delhi
+Sneha	        Bengaluru
+Kiran	        Chennai
+Neha	        Bengaluru
+
 12. WHERE – Filter Records
 
 WHERE is used to retrieve records based on a condition.
 
+select * from tableName where columnName OP Value;
+=,!=, >, >=, <, <= 
+
+
 Find Bengaluru Customers
+
 SELECT *
 FROM customers
 WHERE city = 'Bengaluru';
@@ -533,12 +620,21 @@ customer_id	customer_name	city
 101	Rahul	Bengaluru
 104	Sneha	Bengaluru
 106	Neha	Bengaluru
+
+SELECT *
+FROM customers
+WHERE customer_id=101;
+
+
 Find Products Above ₹5,000
+
 SELECT product_name, price
 FROM products
 WHERE price > 5000;
+
 13. WHERE with AND / OR
 AND
+
 SELECT *
 FROM products
 WHERE category = 'Electronics'
@@ -547,6 +643,7 @@ AND price > 1000;
 AND → Both conditions must be true.
 
 OR
+
 SELECT *
 FROM customers
 WHERE city = 'Bengaluru'
@@ -554,11 +651,24 @@ OR city = 'Mumbai';
 
 OR → At least one condition must be true.
 
+between operator : range 
+
+in operator : more than one value condition 
+is null : 
+like : 
+
+select * from products where price between 2500 and 7500;
+select * from products where product_id in (205,202,210);
+select * from customers where customer_name like '%a';
+select * from customers where customer_name like 'p%';
+select * from customers where customer_name like '%e%';
+
 14. DISTINCT
 
 DISTINCT is used to retrieve unique values.
 
 Example
+
 SELECT DISTINCT city
 FROM customers;
 
@@ -570,6 +680,7 @@ Mumbai
 Delhi
 Chennai
 Another Example
+
 SELECT DISTINCT category
 FROM products;
 
@@ -578,15 +689,19 @@ Result:
 category
 Electronics
 Furniture
+
 15. ORDER BY
 
 ORDER BY is used to sort the result.
 
 Ascending
+
 SELECT product_name, price
 FROM products
 ORDER BY price ASC;
+
 Descending
+
 SELECT product_name, price
 FROM products
 ORDER BY price DESC;
@@ -594,12 +709,13 @@ ORDER BY price DESC;
 Result:
 
 product_name	price
-Laptop	60000
-Desk	10000
+Laptop	        60000
+Desk	        10000
 Office Chair	7500
-Headphones	2500
-Keyboard	1500
-Mouse	800
+Headphones	    2500
+Keyboard	    1500
+Mouse	        800
+
 16. Combining SELECT + WHERE + ORDER BY
 Requirement
 
@@ -610,7 +726,9 @@ FROM products
 WHERE category = 'Electronics'
 AND price > 1000
 ORDER BY price DESC;
+
 Concepts Used
+
 SELECT
    ↓
 Choose columns
@@ -622,6 +740,7 @@ Filter records
 ORDER BY
    ↓
 Sort results
+
 17. JOIN – Combining Tables
 
 Applications normally store related information in different tables.
@@ -629,15 +748,17 @@ Applications normally store related information in different tables.
 For example:
 
 Customers
-customer_id	customer_name
-101	Rahul
-102	Priya
-103	Amit
+PK          non key 
+customer_id	customer_name   
+101	        Rahul
+102	        Priya
+103	        Amit
+
 Orders
 order_id	customer_id	product_id
-5001	101	201
-5002	102	204
-5003	101	202
+5001	    101	        201
+5002	    102	        204
+5003	    101	        202
 
 To display:
 
@@ -660,12 +781,12 @@ ON c.customer_id = o.customer_id;
 Result:
 
 customer_name	order_id	quantity
-Rahul	5001	1
-Priya	5002	2
-Rahul	5003	1
-Amit	5004	1
-Sneha	5005	2
-Neha	5006	1
+Rahul	        5001	    1
+Priya	        5002	    2
+Rahul	        5003	    1
+Amit	        5004	    1
+Sneha	        5005	    2
+Neha	        5006	    1
 Remember
 
 INNER JOIN → Matching records from both tables
@@ -685,17 +806,21 @@ INNER JOIN customers c
     ON o.customer_id = c.customer_id
 INNER JOIN products p
     ON o.product_id = p.product_id;
+
 Result
-Customer	Product	Quantity	Order Date
-Rahul	Laptop	1	2026-08-01
-Priya	Office Chair	2	2026-08-02
-Rahul	Mouse	1	2026-08-03
-Amit	Headphones	1	2026-08-04
-Sneha	Keyboard	2	2026-08-05
-Neha	Desk	1	2026-08-06
+Customer	Product	        Quantity	Order Date
+Rahul	    Laptop	        1	        2026-08-01
+Priya	    Office Chair	2	        2026-08-02
+Rahul	    Mouse	        1	        2026-08-03
+Amit	    Headphones	    1	        2026-08-04
+Sneha	    Keyboard	    2	        2026-08-05
+Neha	    Desk	        1	        2026-08-06
+
 Corporate Meaning
 
-A single business report often requires information from multiple related tables, so JOIN is one of the most important SQL concepts for application developers.
+A single business report often requires information 
+from multiple related tables, so JOIN is one of the 
+most important SQL concepts for application developers.
 
 20. LEFT JOIN
 
@@ -707,10 +832,20 @@ SELECT
 FROM customers c
 LEFT JOIN orders o
 ON c.customer_id = o.customer_id;
+
+
+SELECT
+    c.customer_name,
+    o.order_id
+FROM customers c
+RIGHT JOIN orders o
+ON c.customer_id = o.customer_id;
+
 Simple Difference
 JOIN	Meaning
 INNER JOIN	Only matching records
 LEFT JOIN	All left records + matching right records
+
 21. SQL Command Classification
 Category	Purpose	Commands
 DDL	Define database structure	CREATE, ALTER, DROP, TRUNCATE
