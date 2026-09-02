@@ -956,6 +956,7 @@ Tag	Purpose
 <small>	Smaller text
 <sub>	Subscript
 <sup>	Superscript
+
 Meaningful Example
 <p>
     Student Name:
@@ -1013,9 +1014,11 @@ Basic syntax:
     Link Text
 </a>
 Meaningful Example
+
 <a href="https://www.google.com">
     Search Student Information
 </a>
+
 Open Link in New Tab
 <a
     href="https://www.google.com"
@@ -1023,10 +1026,12 @@ Open Link in New Tab
 >
     Open Google
 </a>
+
 Important attributes
 Attribute	Purpose
 href	Destination
 target	Where to open link
+
 10. Internal Links
 Concept
 
@@ -1058,6 +1063,7 @@ This is very useful for:
 Navigation menus
 Single-page websites
 Long webpages
+
 11. Email and Telephone Links
 Email
 <a href="mailto:admissions@college.com">
@@ -1092,6 +1098,7 @@ src	Image location
 alt	Alternative text
 width	Image width
 height	Image height
+
 Important point
 
 <img> does not have a closing tag.
@@ -1101,7 +1108,8 @@ Important point
 Not:
 
 <img src="student.jpg"></img>
-13. Unordered List – <ul>
+
+Unordered List – <ul>
 Concept
 
 Used when the order of items does not matter.
@@ -1110,15 +1118,10 @@ Example
 <h2>Available Courses</h2>
 
 <ul>
-
     <li>Java Full Stack</li>
-
     <li>Python Full Stack</li>
-
     <li>MERN Stack</li>
-
     <li>Data Science</li>
-
 </ul>
 
 Output:
@@ -1127,7 +1130,8 @@ Java Full Stack
 Python Full Stack
 MERN Stack
 Data Science
-14. Ordered List – <ol>
+
+Ordered List – <ol>
 Concept
 
 Used when the order/sequence is important.
@@ -1136,17 +1140,11 @@ Example
 <h2>Student Admission Process</h2>
 
 <ol>
-
     <li>Submit Application</li>
-
     <li>Upload Documents</li>
-
     <li>Attend Counselling</li>
-
     <li>Pay Admission Fee</li>
-
     <li>Confirm Admission</li>
-
 </ol>
 
 Output:
@@ -1156,6 +1154,7 @@ Upload Documents
 Attend Counselling
 Pay Admission Fee
 Confirm Admission
+
 15. Description List – <dl>
 Concept
 
@@ -1163,33 +1162,26 @@ Used for terms and their descriptions.
 
 Example
 <dl>
-
     <dt>HTML</dt>
-
     <dd>
         Used to create webpage structure.
     </dd>
-
-
     <dt>CSS</dt>
-
     <dd>
         Used to style webpages.
     </dd>
-
-
     <dt>JavaScript</dt>
-
     <dd>
         Used to add webpage behavior.
     </dd>
-
 </dl>
+
 Tags
 <dl> → Description List
 <dt> → Description Term
 <dd> → Description Details
-16. HTML Tables
+
+HTML Tables
 Concept
 
 Tables are used to display structured information in rows and columns.
@@ -1204,7 +1196,9 @@ Basic structure
         <td>Data</td>
     </tr>
 </table>
+
 Meaningful Example
+
 <h2>Student Information</h2>
 
 <table border="1">
@@ -1237,12 +1231,14 @@ Meaningful Example
     </tr>
 
 </table>
+
 Tags
 Tag	Meaning
 <table>	Creates table
 <tr>	Table row
 <th>	Table heading
 <td>	Table data
+
 17. Table Sections
 
 For professional HTML, tables can be divided into:
@@ -1262,6 +1258,7 @@ For professional HTML, tables can be divided into:
     </tfoot>
 
 </table>
+
 Meaningful Example
 <table border="1">
 
@@ -1316,6 +1313,7 @@ Meaningful Example
     </tfoot>
 
 </table>
+
 18. colspan
 Concept
 
@@ -1347,6 +1345,7 @@ Here:
 Student Details
 ────────────────────────
        3 columns
+
 19. rowspan
 Concept
 
@@ -1381,6 +1380,7 @@ Example
 </table>
 
 Monday occupies two rows.
+
 
 20. Forms
 Concept
