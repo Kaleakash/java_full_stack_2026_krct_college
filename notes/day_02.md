@@ -444,34 +444,6 @@ FOREIGN KEY
 Creates relationship between tables
 
 
-4. ALTER TABLE
-
-Used to modify an existing table structure.
-
-Add a Column
-ALTER TABLE customers
-ADD phone VARCHAR(15);
-Meaning
-
-The existing customers table now has an additional phone column.
-
-5. DROP TABLE
-
-Used to remove a table completely.
-
-DROP TABLE customers;
-Removes the table structure.
-Removes the data stored in the table.
-
-6. TRUNCATE TABLE
-
-Used to remove all records while keeping the table structure.
-
-TRUNCATE TABLE customers;
-Difference
-Command	Result
-DROP	Removes table + data
-TRUNCATE	Removes data, keeps table
 
 7. DML – Data Manipulation Language
 
