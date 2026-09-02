@@ -647,10 +647,60 @@ GROUP BY department
 HAVING COUNT(*) > 2;
 
 
+html, css, js, ts and angular framework/react js  
+
+
+https://www.google.com ---> URL 
+http : hyper text transfer protocol : set of rules 
+www : world wide web 
+google : domain 
+com : commercial 
+
+                http/https---> request 
+Client                                              Server 
+
+                response <-----http/https 
+                                        
+                                        HTML: hyper text mark up language 
+                                        1,2,3,4,5 etc. 
+                                        CSS : Cascading style sheet 
+                                        1,2,3 etc. 
+
+                                        css library as well as framework 
+                                        bootstrap 
+                                        tail wind css 
+
+                                        JS : JavaScript 
+                                        validation: required, min, max etc 
+
+                                        today we can 
+                                        do validation using 
+                                        html5
+                                        js or any other library or 
+                                        framework. 
+
+                                        basic JS
+                                        event 
+                                        DOM Operation 
+                                      document object model 
+                want to read, write and update html contents 
+                dynamically (using coding)
+
+                TypeScript.
+                JS library and framework. 
+                Angular framework 
+                React JS library 
+                Vue JS 
+                D3 JS 
+
+                it is use to read, write and update dom effectively. 
+
+
 1. What is HTML?
 Concept
 
-HTML (HyperText Markup Language) is the standard markup language used to create the structure of web pages.
+HTML (HyperText Markup Language) is the standard markup 
+language used to create the structure of web pages.
 
 HTML defines what content appears on a webpage, such as:
 
@@ -664,14 +714,27 @@ Form
 Navigation
 Sections
 
-HTML is not a programming language because it does not contain programming logic such as loops, conditions, or functions.
+HTML is not a programming language 
+because it does not contain programming logic such as loops, 
+conditions, or functions.
+
+html provided lot of pre defined tags or elements 
+syntax 
+
+<tagName>       opening tag 
+
+</tagName>      closing tag 
+
+<tagName/>      self closing tag 
 
 Example
+
 <h1>College Student Management System</h1>
 
 <p>
     Welcome to the Student Management Portal.
 </p>
+
 Output
 
 College Student Management System
@@ -679,21 +742,22 @@ College Student Management System
 Welcome to the Student Management Portal.
 
 2. HTML Document Structure
+
 Concept
 
 Every HTML5 page normally starts with a standard document structure.
+from html 5 onwards. 
 
 Syntax
-<!DOCTYPE html>
+
+<!DOCTYPE html>     providing instruction to browser writing the code using htm 5 
 
 <html>
-
 <head>
 
     <title>Page Title</title>
 
 </head>
-
 <body>
 
     Page Content
@@ -701,14 +765,21 @@ Syntax
 </body>
 
 </html>
+
+Pagename with any name with extension .html or .htm 
+
+
 Meaning of each tag
 Tag	Meaning
+
 <!DOCTYPE html>	Tells browser that document uses HTML5
 <html>	Root element
 <head>	Contains page information/configuration
 <title>	Browser tab title
 <body>	Visible webpage content
+
 Meaningful Example
+
 <!DOCTYPE html>
 
 <html lang="en">
@@ -732,10 +803,13 @@ Meaningful Example
 </body>
 
 </html>
+
 3. <head> and <body>
+
 <head>
 
-The <head> contains information about the webpage, rather than the main visible content.
+The <head> contains information about the webpage,
+ rather than the main visible content.
 
 Common elements:
 
@@ -751,12 +825,15 @@ Common elements:
     <title>Student Portal</title>
 
 </head>
+
 Important tags inside <head>
+
 <title>
 <meta>
 <link>
 <style>
 <script>
+
 <body>
 
 Contains the content displayed to users.
@@ -768,17 +845,19 @@ Contains the content displayed to users.
     <p>Welcome students.</p>
 
 </body>
+
 4. Heading Tags
 Concept
 
 HTML provides six levels of headings.
 
-<h1>College</h1>
+<h1>College</h1>        largest 
 <h2>Departments</h2>
 <h3>Computer Science</h3>
 <h4>Courses</h4>
 <h5>Subjects</h5>
-<h6>Topics</h6>
+<h6>Topics</h6>         smallest 
+
 Hierarchy
 h1
  ├── h2
@@ -786,6 +865,7 @@ h1
  │    └── h3
  │
  └── h2
+
 Meaningful Example
 <h1>Acharya College</h1>
 
@@ -800,11 +880,13 @@ Meaningful Example
 <h3>BCA</h3>
 
 <h3>B.Tech</h3>
+
 Key point
 
 <h1> is the highest-level heading and <h6> is the lowest.
 
 5. Paragraph <p>
+
 Concept
 
 The <p> tag is used to represent a paragraph.
@@ -816,6 +898,7 @@ Example
     Our college provides undergraduate and postgraduate
     programs in computer science, engineering and management.
 </p>
+
 Key point
 
 Use <p> for normal textual content instead of using headings for paragraphs.
@@ -839,7 +922,8 @@ Course: B.Tech Computer Science
 Semester: First Semester
 Key point
 
-<br> is useful for a line break, but should not normally be used to create page spacing.
+<br> is useful for a line break, 
+but should not normally be used to create page spacing.
 
 7. Horizontal Line <hr>
 Concept
@@ -856,6 +940,7 @@ Example
 <h2>Course Details</h2>
 
 <p>Computer Science Engineering</p>
+
 8. Text Formatting Tags
 
 HTML provides several tags for emphasizing or formatting content.
