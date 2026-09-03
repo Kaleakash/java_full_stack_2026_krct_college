@@ -892,23 +892,28 @@ Selects all elements of a particular type.
 p {
     color: gray;
 }
+
 Class Selector
 
 Used when multiple elements need the same style.
 
 <p class="student">Rahul</p>
 <p class="student">Priya</p>
+
 .student {
     color: blue;
 }
+
 ID Selector
 
 Used to identify a specific element.
 
 <h1 id="title">Student Portal</h1>
+
 #title {
     color: green;
 }
+
 Group Selector
 
 Applies the same style to multiple elements.
@@ -916,6 +921,7 @@ Applies the same style to multiple elements.
 h1, h2, p {
     font-family: Arial;
 }
+
 
 Selector Summary
 
@@ -992,7 +998,7 @@ Margin
 
   Example using box model 
 
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -1075,9 +1081,10 @@ external css file
     cursor: pointer;
 }
 
-CSS Flexbox
+CSS Flex box
 
-Flexbox is used to arrange HTML elements in a row or column and control their alignment and spacing.
+Flex box is used to arrange HTML elements in a row or 
+column and control their alignment and spacing.
 
 The parent element becomes a Flex container:
 
@@ -1085,6 +1092,7 @@ The parent element becomes a Flex container:
     display: flex;
 }
 Important Flex Properties
+
 .container {
     display: flex;
 

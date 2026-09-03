@@ -1,0 +1,243 @@
+/* =========================
+   GLOBAL
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+
+    font-family: Arial, sans-serif;
+
+    background-color: #f4f6f8;
+
+    color: #333;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+
+    /* Flexbox */
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+
+    /* Box Model */
+
+    padding: 20px 40px;
+
+
+    /* Styling */
+
+    background-color: #1f2937;
+
+    color: white;
+}
+
+
+.header h1 {
+    margin: 0;
+}
+
+
+nav {
+
+    display: flex;
+
+    gap: 20px;
+}
+
+
+nav a {
+
+    color: white;
+
+    text-decoration: none;
+}
+
+
+nav a:hover {
+
+    text-decoration: underline;
+    color:orange
+}
+
+
+/* =========================
+   PAGE TITLE
+========================= */
+
+.page-title {
+
+    margin: 40px 0 25px;
+
+    text-align: center;
+
+    color: #1e3a8a;
+}
+
+
+/* =========================
+   FLEX CONTAINER
+========================= */
+
+.course-container {
+
+    /* Flexbox */
+
+    display: flex;
+
+    flex-direction: row;
+
+    justify-content: space-between;
+
+    align-items: stretch;
+
+    gap: 20px;
+
+    flex-wrap: wrap;
+
+
+    /* Container spacing */
+
+    width: 90%;
+
+    margin: 0 auto;
+}
+
+
+/* =========================
+   COURSE CARD
+========================= */
+
+.course-card {
+
+    /*
+       FLEXBOX
+       Each card shares
+       available space
+    */
+
+    flex: 1;
+
+    min-width: 250px;
+
+
+    /*
+       BOX MODEL
+    */
+
+    padding: 25px;
+
+    border: 2px solid #ddd;
+
+    margin: 5px;
+
+
+    /*
+       Other CSS
+    */
+
+    background-color: white;
+
+    border-radius: 10px;
+
+    box-shadow: 0 3px 8px
+                rgba(0, 0, 0, 0.1);
+}
+
+
+/* Card Heading */
+
+.course-card h3 {
+
+    margin-top: 0;
+
+    color: #2563eb;
+
+    font-size: 22px;
+}
+
+
+/* Card Paragraph */
+
+.course-card p {
+
+    line-height: 1.6;
+
+    margin-bottom: 20px;
+}
+
+
+/* Button */
+
+.course-card button {
+
+    padding: 10px 20px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    background-color: #2563eb;
+
+    color: white;
+
+    cursor: pointer;
+}
+
+
+.course-card button:hover {
+
+    background-color: #1d4ed8;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+
+    margin-top: 40px;
+
+    padding: 20px;
+
+    text-align: center;
+
+    background-color: #1f2937;
+
+    color: white;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 700px) {
+
+    .header {
+
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+
+    .course-container {
+
+        flex-direction: column;
+    }
+
+}
