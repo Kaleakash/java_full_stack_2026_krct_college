@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        function myFunction() {
+            // we can do more complex logic
+            alert('You click on user defined function');
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="Click Here" onclick="alert('You click on button')"/>
+    <input type = "button" value="Call user defined function" onclick="myFunction()"/>
+<input type="button" value="Register event on JS Side" id="btn1"/>
+    <script type="text/JavaScript">
+        let buttonReference = document.getElementById('btn1');
+        buttonReference.addEventListener('dblclick', function() {
+            alert('You click on button registered on JS side');
+        });
+    </script>
+</body>
+</html>

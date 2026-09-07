@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/JavaScript">
+        let num1 = [1,2,3,4,5,6,7,8,9,10];  // using literal style 
+        let num2 = new Array(11,12,13,14,15,16,17,18,19,20); // using constructor style
+        document.write("<br/>"+num1.length);
+        document.write("<br/>"+num2.length);
+        document.write("<br/>"+num1);   // it display as string format 
+        document.write("<br/>"+num1.join("-"));   // it display as string format
+        document.write("<br/>"+num1[0]);    // access specific element of array
+        num1.push(11);   // add element at the end of array
+        num1.unshift(0);  // add element at the beginning of array
+        document.write("<br/>"+num1);
+        num1.pop();   // remove element from the end of array
+        num1.shift();  // remove element from the beginning of array
+        document.write("<br/>"+num1);
+        document.write("<br/> Display element using for loop")
+        for(let i = 0;i<num1.length;i++){
+            document.write("<br/>"+num1[i]);
+        }
+        document.write("<br/> Display element using for of loop")
+        for(let n of num1){
+            document.write("<br/>"+n);
+        }
+        document.write("<br/> Display element using for for Each")
+        num1.forEach(v=>document.write("<br/>"+v));
+       
+    </script>
+</body>
+</html>

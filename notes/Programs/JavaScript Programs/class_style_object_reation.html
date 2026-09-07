@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/JavaScript">
+       // 1st example with only constructor 
+       // class Product {
+        //  constructor() {
+        //     document.write("<br/> Product Object in class style")
+        //  }   
+        // }
+        // let p1 = new Product();
+       // constructor with instance variable
+        // class Product {
+        //     constructor() {
+        //         this.pid = 100;
+        //         this.pname = "Mobile";
+        //         this.price = 20000;
+        //     }
+        // }
+        // let p1 = new Product();
+        // document.write("<br/> Product ID : "+p1.pid)
+        // document.write("<br/> Product Name : "+p1.pname)
+        // document.write("<br/> Product Price : "+p1.price)
+
+        // product class, property, constructor and methods 
+        class Product {
+            constructor(pid,pname,price){
+                this.pid = pid;
+                this.pname = pname;
+                this.price = price;
+            }
+            discount(){
+                // Implementation for discount logic
+                this.price = this.price - (this.price * 0.1); // Apply 10% discount
+            }
+            display() {
+                document.write("<br/> Product property inside a display in class style")
+                document.write("<br/> Product ID : "+this.pid)
+                document.write("<br/> Product Name : "+this.pname)
+                document.write("<br/> Product Price : "+this.price)
+            }
+        }
+        let p1 = new Product(100,"Mobile",20000);
+        let p2 = new Product(101,"Laptop",50000);
+        let p3 = new Product(102,"Tablet",30000);
+        let products = [];      // array of the products. 
+        products.push(p1);
+        products.push(p2);
+        products.push(p3);
+        document.write("<br/> Product details before discount")
+        products.forEach(p=>p.display());
+        products.forEach(p=>p.discount());
+        document.write("<br/> Product details after discount")
+        products.forEach(p=>p.display());
+    </script>
+</body>
+</html>

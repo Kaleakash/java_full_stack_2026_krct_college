@@ -106,6 +106,12 @@ Use: Events, timers, array methods, asynchronous operations.
 
 4. JavaScript Object
 
+Object : any real world entity 
+Like Person, Bank, Animal, Customer etc. 
+
+Property --> have 
+Behaviour --->do/does 
+
 Definition: A collection of related key-value pairs representing an entity.
 
 Use case: Store related information together.
@@ -114,7 +120,11 @@ let student = {
     name: "Rahul",
     age: 20,
     marks: 85
-};
+};              this is student object 
+
+let name = "Raj";       these 3 ara normal variables not link to gether. 
+let age = 34;
+let marks = 56;
 
 console.log(student.name);
 console.log(student.marks);
@@ -128,6 +138,11 @@ Rahul
 
 JavaScript provides predefined objects such as:
 
+ Pre defined object 
+ as well as user defined objects. 
+
+few are basic pre defined objects. 
+
 Array
 String
 Math
@@ -136,6 +151,7 @@ Object
 JSON
 Map
 Set
+
 Array
 
 Use: Store multiple values.
@@ -157,7 +173,9 @@ filter()
 reduce()
 forEach()
 find()
+
 String
+
 let name = "JavaScript";
 
 console.log(name.toUpperCase());
@@ -167,11 +185,12 @@ Output:
 
 JAVASCRIPT
 10
-6. User-Defined Objects
+
+User-Defined Objects
 
 There are three important ways.
 
-Object Literal
+Object Literal: this type of syntax prefer if you want to store only property. 
 
 Use: Create one/few objects.
 
@@ -179,6 +198,7 @@ let student = {
     name: "Rahul",
     marks: 85
 };
+
 Constructor Function
 
 Use: Create multiple similar objects; common in older JavaScript code.
@@ -215,13 +235,71 @@ Easy comparison:
 Object Literal       → One object
 Constructor Function → Multiple similar objects
 Class                → Multiple similar objects + behavior
-7. DOM
 
-Definition: DOM (Document Object Model) represents an HTML page as a tree of objects that JavaScript can access and modify.
+
+
+8. Events
+
+Definition: An event is an action that happens in the browser or on an HTML element.
+when user interact with any web page contents different types of event occurs. 
+or 
+event provide bridge between html and JS contents. 
+
+Use: Make webpages interactive.
+
+Common events:
+
+click
+input
+change
+submit
+keydown
+keyup
+mouseover
+mouseout
+focus
+blur
+
+Js provide all pre defined event start with pre fix on followed by event names 
+
+onclick 
+ondblclick
+onmouseover
+onkeyup
+onkeydown
+onsubmit 
+
+etc 
+
+Example
+button.addEventListener("click", () => {
+    console.log("Button clicked");
+});
+
+Meaning:
+
+click happens
+     ↓
+event detected
+     ↓
+callback function executes
+
+The recommended modern approach is:
+
+addEventListener()
+
+
+
+
+DOM
+
+Definition: DOM (Document Object Model) represents 
+an HTML page as a tree of objects that JavaScript can access and modify.
 
 Use: Dynamically change webpage content, CSS, attributes and elements.
 
 Example
+
 <h1 id="heading">Hello</h1>
 
 <button id="button">Change</button>
@@ -253,41 +331,6 @@ createElement()
 appendChild()
 remove()
 setAttribute()
-addEventListener()
-
-8. Events
-
-Definition: An event is an action that happens in the browser or on an HTML element.
-
-Use: Make webpages interactive.
-
-Common events:
-
-click
-input
-change
-submit
-keydown
-keyup
-mouseover
-mouseout
-focus
-blur
-Example
-button.addEventListener("click", () => {
-    console.log("Button clicked");
-});
-
-Meaning:
-
-click happens
-     ↓
-event detected
-     ↓
-callback function executes
-
-The recommended modern approach is:
-
 addEventListener()
 
 9. Synchronous JavaScript

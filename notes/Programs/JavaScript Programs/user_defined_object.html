@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/JavaScript">
+        // user define object in literal style 
+    let student1 = {sid:100,sname:"Raj",age:21,city:"Bangalore"}
+    document.write("<br/> Student Object in literal style")
+    document.write("<br/> Student ID : "+student1.sid)
+    document.write("<br/> Student Name : "+student1.sname)
+    document.write("<br/> Student Age : "+student1.age)
+    document.write("<br/> Student City : "+student1.city)
+    // object creation in function style 
+    // function Student() {
+    //     document.write("<br/> Student Object in function style")
+    // }  
+    // //Student();  // it is consider as normal student Function
+    // let s1 = new Student();// it is consider as object creation
+    function Student() {
+        this.sid  = 100;
+        this.sname = "Raj";     // it is consider as instance variable. 
+        var age = 21; // private variable or local variable. 
+        this.display = function() {
+            document.write("<br/> Student property inside a display in function style")
+            document.write("<br/> Student ID : "+this.sid)
+            document.write("<br/> Student Name : "+this.sname)
+            document.write("<br/> Student Age : "+age)  // it is private variable
+        }
+    }
+    let s1 = new Student();
+    document.write("<br/> Student ID : "+s1.sid)
+    document.write("<br/> Student Name : "+s1.sname)
+    document.write("<br/> Student Age : "+s1.age)  // it is undefined because age is private variable
+    s1.display(); // it is used to access private variable.
+    
+    // object creation in class style 
+    class Employee {
+        id=100;
+        name = "Raj";
+        age = 21;
+
+        display() {
+            document.write("<br/> Employee property inside a display in class style")
+            document.write("<br/> Employee ID : "+this.id)
+            document.write("<br/> Employee Name : "+this.name)
+            document.write("<br/> Employee Age : "+this.age)
+        }
+    }
+    let emp1 = new Employee();
+    emp1.display();
+    </script>
+</body>
+</html>
