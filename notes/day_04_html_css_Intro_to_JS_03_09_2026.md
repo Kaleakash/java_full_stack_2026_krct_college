@@ -1505,7 +1505,9 @@ footer {
 JavaScript Notes
 JavaScript Definition
 
-JavaScript is a scripting object based interpreter language used to add logic, interactivity and dynamic behavior to web applications.
+JavaScript is a  object based interpreter scripting language 
+used to add logic, interactivity and dynamic 
+behavior to web applications.
 
 HTML       → Structure
 CSS        → Design
@@ -1517,17 +1519,35 @@ Form validation
 Button click events
 Dynamic web pages
 Calculations
-API communication
+API communication calling backend technologies. 
 DOM manipulation
 Interactive dashboards
-Frontend applications using React
+Frontend applications using React or Angular 
 Backend development using Node.js
 
 
-Variables, Constants & Primitive Types
-Variables
+if we want do any coding using js we need to use 
+script tag. 
+Internal JavaScript code.
+<script type="text/JavaScript">     opening tag 
+        we can do coding. 
+</script>                           closing tag 
 
-Variables are used to store data.
+this script tag we can write in between head or body tag of html web page.. 
+
+JS provided lot of pre defined objects. 
+document.write("Welcome to Java")   it use to display output 
+on browser using js code. 
+console.log("it is use to display output on browser console")
+
+
+Variables, Constants & Primitive Types
+
+Variables
+variable is a name and 
+Variables are used to store data or value. 
+
+in JS to declare the variable. 
 
 JavaScript provides:
 
@@ -1583,7 +1603,8 @@ Operators & Expressions
 
 An operator performs an operation on values.
 
-An expression is a combination of values, variables and operators that produces a result.
+An expression is a combination of values, variables 
+and operators that produces a result.
 
 Arithmetic Operators
 
@@ -1605,6 +1626,7 @@ let total = marks + bonus;
 console.log(total); // 85
 
 Assignment Operators
+
 let marks = 80;
 
 marks += 5;    // 85
@@ -1682,6 +1704,7 @@ console.log(!loggedIn);
 Result:
 
 true
+
 Control Flow
 
 Control flow determines which statements should execute and how many times.
