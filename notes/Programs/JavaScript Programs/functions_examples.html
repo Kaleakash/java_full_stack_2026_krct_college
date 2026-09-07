@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <script type="text/JavaScript">
+        // normal function 
+        function greet() {
+            document.write("<br/> Normal function without passing any parameter");
+        }
+        greet();
+        // function which takes 2 parameter 
+        function add(a,b){
+            document.write("<br/> Addition of "+a+" and "+b+" is "+(a+b));
+        }
+        /// function return the value 
+        function sayHello(name){
+            return "welcome user "+name;
+        }
+    </script>
+</head>
+<body>
+   <script type="text/JavaScript">
+    greet();
+    add(10,20);
+    let message = sayHello("John");
+    document.write("<br/> In Main script"+message);
+   </script>
+</body>
+</html>

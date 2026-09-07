@@ -75,6 +75,8 @@ Use: Store/pass functions as values.
 Arrow Function
 
 Definition: Shorter syntax for writing a function expression.
+in arrow function, function keyword replace by =>. if you write one line statement 
+{} not required and arrow function by default return the value without return keyword. 
 
 const add = (a, b) => a + b;
 
@@ -86,6 +88,8 @@ Callback Function
 
 Definition: A function passed to another function to be executed later.
 
+passing function name or function body or function itself to another function as a 
+parameter is known as callback functions. 
 function processUser(callback) {
     callback("Akash");
 }

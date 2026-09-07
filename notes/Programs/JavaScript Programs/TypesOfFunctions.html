@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/JavaScript">
+        // normal function
+        display1();
+        function display1() {
+            document.write("<br/> Normal function without passing any parameter");
+        }
+       // display2();
+        // expression function 
+        let display2 = function() {
+            document.write("<br/> Expression function without passing any parameter");
+        }
+        // arrow function
+        let display3 = ()=>document.write("<br/> Arrow function without passing any parameter");
+        // addition of 2 number using express as well as arrow function
+        let addNumber1 = function(a,b){
+            let sum = a+b;
+            return sum;
+        }
+        let addNumber2 = (a,b)=>a+b;
+    </script>
+</head>
+<body>
+    <script type="text/JavaScript">
+        display1();
+        display2();
+        display3();
+        document.write("<br/> Addition of 10 and 20 using expression function is "+addNumber1(10,20));
+        document.write("<br/> Addition of 10 and 20 using arrow function is "+addNumber2(10,20));
+    </script>
+</body>
+</html>

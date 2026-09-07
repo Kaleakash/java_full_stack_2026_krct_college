@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/JavaScript">
+        function greetUser(name,callback){
+                return "Welcome "+callback(name);
+        }
+        let maleInfo = function(name){
+            return "Mr "+name;
+        }
+        let femaleInfo = (name)=>"Miss "+name;
+        document.write("<br/>"+greetUser("John",maleInfo));
+        document.write("<br/>"+greetUser("Mary",femaleInfo));
+        document.write("<br/>"+greetUser("Raj",function(name){
+            return "Mr "+name;
+        }));
+        document.write("<br/>"+greetUser("Rani",(name)=>"Miss "+name));
+        </script>
+</head>
+<body>
+
+    </body> 
+</html>
