@@ -684,6 +684,18 @@ Avoid naming conflicts
 Maintain code easily
 Separate different responsibilities
 
+first create the typescript configuration file using below command as 
+
+tsc --init 
+
+this command help to create tsconfig.json file. which contains all configuration details. 
+
+tsconfig.json file do few changes as 
+
+"target": "es2020",
+//    "verbatimModuleSyntax": true,         make is comments 
+
+
 calculator.ts
 
 export function add(
@@ -724,6 +736,7 @@ export function divide(
 Here, export makes the functions available to other files.
 
 app.ts
+
 import {
     add,
     subtract,
@@ -740,4 +753,33 @@ console.log("Multiplication:", multiply(10, 5));
 
 console.log("Division:", divide(10, 5));
 
+to convert tsc 
+
+to run main file 
+
+node app.js/main.js 
+
+
+
+Decorator in TypeScript
+
+Simple Definition
+
+A decorator is a special function that adds extra 
+information or behavior to a class, method, property, or parameter.
+
+In simple words:
+
+Decorator = tells TypeScript/Angular something special about a piece of code.
+
+Decorators are written using @.
+all decorator or annotation start with pre fix @ followed by decorator name. 
+
+
+Common Angular Decorators
+1. @Component
+2. @Injectable
+3. @NgModule 
+4. @Input 
+5. @Output 
 

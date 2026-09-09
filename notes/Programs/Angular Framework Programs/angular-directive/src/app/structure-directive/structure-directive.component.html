@@ -1,0 +1,20 @@
+<div>
+    <h3>Structure directive using *ngIf and *ngFor</h3>
+    <p>Welcome to HTML Web page</p>
+    <p *ngIf="true">Welcome to HTML Web Page using true value</p>
+    <p *ngIf="false">Welcome to HTML Web Page using false value</p>
+    <input type="button" [value]="buttonValue" (click)="toggle()"/>
+    <div *ngIf="flag">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUGOmXoRGs1yenxuKurqvT4eyIkvfJoWImD4YbglMCnA&s=10"
+                width="200px" height="200px"
+            />
+    </div>
+    <hr/>
+    <input type="text" #nameRef placeholder="Add Names"/>
+    <input type="button" value="addNames" (click)="addNames(nameRef)"/><br/>
+    <p>{{std_names}}</p>
+    <h3>All Student names are : </h3>
+    <ul>
+        <li *ngFor="let std_name of std_names">{{std_name}}</li>
+    </ul>
+</div>

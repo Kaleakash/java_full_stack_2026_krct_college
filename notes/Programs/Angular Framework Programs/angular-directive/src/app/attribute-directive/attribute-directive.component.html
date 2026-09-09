@@ -1,0 +1,9 @@
+<div>
+    <h3>Attribute Directive</h3>
+    <p style="color:red;">Welcome to HTML Web Page styling using inline CSS</p>
+    <p [ngStyle]='{"color":"red"}'>Welcome to HTML Web Page styling using ngStyle Attribute Directive</p>
+    <p [ngStyle]="styleVariable">Welcome to HTML Web Page styling using ngStyle with variable</p>
+    <p class="abc">Welcome to HTML Web page using css class selector</p>
+    <p [ngClass]='{abc:flag}'
+    (mouseover)="fun1()" (mouseout)="fun2()">Welcome to HTML Web page using ngClass class selector</p>
+</div>
