@@ -254,9 +254,11 @@ and data-related operations that can be shared by multiple components.
 
 Simple definition:
 
-A service is a reusable class that contains application logic that should not be tightly coupled to a component.
+A service is a reusable class that contains application logic 
+that should not be tightly coupled to a component.
 
-Yes. A Login Service is a good example to teach how Angular services handle authentication/business logic separately from the component.
+Yes. A Login Service is a good example to teach how Angular services 
+handle authentication/business logic separately from the component.
 
 1. Create Login Service
 
@@ -297,7 +299,13 @@ IoC (Inversion of Control) and DI (Dependency Injection) are closely related con
 
 Simple definition:
 
-IoC means the responsibility of creating and managing objects is given to the framework instead of being handled manually by the developer.
+IoC means the responsibility of creating 
+and managing objects is given to the framework 
+instead of being handled manually by the developer.
+
+IOC is a concept. 
+In place of we create any resources explicitly allow to create 
+and maintain by container. 
 
 Normally, we create objects ourselves:
 
@@ -305,7 +313,8 @@ const loginService = new LoginService();
 
 Here, we are controlling object creation.
 
-With Angular, we don't normally create the service manually. Angular creates and provides it for us.
+With Angular, we don't normally create the service manually. 
+Angular creates and provides it for us.
 
 constructor(private loginService: LoginService) {}
 
