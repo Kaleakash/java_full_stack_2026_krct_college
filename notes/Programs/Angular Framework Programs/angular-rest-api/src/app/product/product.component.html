@@ -1,0 +1,23 @@
+<div>
+    <input type="button"
+     value="Load Data"
+     (click)="loadFakeProducts()"/>
+     <hr/>
+     <div *ngIf="flag">
+     <table border="1">
+        <tr>
+            <th>Id</th>
+            <th>PName</th>
+            <th>Price</th>
+            <th>Image URL</th>
+        </tr>
+        <tr *ngFor="let product of products">
+                <td>{{product.id}}</td>
+                <td>{{product.title}}</td>
+                <td>{{product.price}}</td>
+                <td><img src={{product.thumbnail}}
+                    width="50px" height="50px"/></td>
+        </tr>
+     </table>
+     </div>
+</div>

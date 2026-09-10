@@ -389,7 +389,13 @@ Angular HTTP Service — Employee Example
 
 What is Angular HTTP Service?
 
-Angular HttpClient is used to communicate with a backend server or REST API using HTTP requests.
+Angular HttpClient is used to communicate with a backend server or 
+REST API using HTTP requests.
+
+In JavaScript we use fetch()
+In Angular we use HttpClient 
+In React JS we use axios 
+
 
 HttpClient part of angular and return type of HttpClient is Observable. 
 Observable — Simple Definition
@@ -400,7 +406,8 @@ In very simple words:
 
 Observable = a data provider that can give values when they become available.
 
-Observable is a mechanism for handling asynchronous data that can be received over time using subscribe().
+Observable is a mechanism for handling asynchronous 
+data that can be received over time using subscribe().
 
 Main Difference
 
@@ -421,6 +428,8 @@ Main Difference
 
 Typical flow:
 
+Employee-Template.html
+
 EmployeeComponent
        |
        ↓
@@ -440,6 +449,12 @@ EmployeeComponent
        |
        ↓
 HTML Table
+
+
+
+html or template ---> component ----> service --> using HttpClient --->
+call backend rest api -------->
+
 
 Instead of putting HTTP code directly inside the component, we normally put it inside a service.
 
