@@ -1,0 +1,12 @@
+<div>
+    <h2>Login page using tdf</h2>
+    <span style="color:red">{{msg}}</span>
+    <form #loginForm="ngForm" (ngSubmit)="checkUserDetails(loginForm)">
+        <label>EmailId</label>
+        <input type="email" name="email" ngModel/><br>
+        <label>Password</label>
+        <input type="password" name="pass" ngModel/><br/>
+        <input type="submit" value="SignIn"/>
+        <input type="reset" value="reset"/>
+    </form>
+</div>

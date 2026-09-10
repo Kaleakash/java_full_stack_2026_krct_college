@@ -1,0 +1,15 @@
+<div>
+    <h2>Login Page using rfm</h2>
+    <span style="color:red">{{msg}}</span>
+<form [formGroup]="loginRef" (ngSubmit)="checkLoginDetails()">
+        <label>EmailId</label>
+        <input type="email"  formControlName="email"/>
+        <br/>
+        <label>EmailId</label>
+        <input type="password"  formControlName="pass"/>
+        <br/>
+        <input type="submit" value="SignIn"/>
+        <input type="reset" value="reset"/>
+        <br/>
+    </form>
+</div>
