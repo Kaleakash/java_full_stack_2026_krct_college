@@ -806,6 +806,7 @@ employee.component.html
 
 </div>
 12. CSS Styling
+
 employee.component.css
 .employee-container {
   width: 90%;
@@ -992,7 +993,9 @@ The overall Angular architecture remains the same.
 Bootstrap
 
 Definition:
-Bootstrap is a popular CSS framework used to build responsive, attractive, and mobile-friendly web pages quickly. It provides ready-made CSS classes and UI components.
+Bootstrap is a popular CSS framework used to build responsive, 
+attractive, and mobile-friendly web pages quickly. 
+It provides ready-made CSS classes and UI components.
 
 Why use Bootstrap?
 
@@ -1000,7 +1003,19 @@ Instead of writing CSS from scratch, we can use predefined classes.
 
 For example:
 
-<button class="btn btn-primary">Save</button>
+
+
+<input type="button" value="click here">
+<input type="button" value="click here" style="background-color:red;">
+<input type="button" value="click here" class="buttonClass">
+<input type="button" value="click" class="btn btn-primary">
+<input type="button" value="click" class="btn btn-primary" style="color:red">
+
+in css file 
+.buttonClass{
+  background-color:yellow;
+  color:red;
+}
 
 Bootstrap automatically provides the button styling.
 
@@ -1031,56 +1046,6 @@ Bootstrap → We use ready-made CSS classes/components to build the UI faster.
 
 Bootstrap is especially useful with Angular, React, Vue, and plain HTML/JavaScript applications.
 
-Java
-
-Definition:
-Java is a high-level, object-oriented, platform-independent programming language developed by Sun Microsystems. It is widely used for backend applications, web applications, enterprise software, Android development, and distributed systems.
-
-Why use Java?
-Object-Oriented — supports class, object, inheritance, polymorphism, etc.
-Platform Independent — Java code runs on any system having a JVM.
-Secure — provides features such as bytecode verification and managed memory.
-Robust — strong type checking and exception handling.
-Multithreaded — supports executing multiple tasks simultaneously.
-Large ecosystem — Spring Boot, Hibernate, Maven, Gradle, etc.
-Java execution flow
-Java Source Code
-       ↓
-     javac
-       ↓
-Bytecode (.class)
-       ↓
-      JVM
-       ↓
-Operating System
-
-The key idea is:
-
-Write Once, Run Anywhere
-
-Important Java concepts
-
-| Concept            | Meaning                            |
-| ------------------ | ---------------------------------- |
-| Variable           | Stores data                        |
-| Data Types         | Define type of data                |
-| Operator           | Performs operations                |
-| `if/else`          | Decision making                    |
-| Loop               | Repeats code                       |
-| Method             | Reusable block of code             |
-| Class              | Blueprint for objects              |
-| Object             | Instance of a class                |
-| Constructor        | Initializes an object              |
-| Inheritance        | Reuses parent class features       |
-| Polymorphism       | Same operation, different behavior |
-| Encapsulation      | Protects/controls data             |
-| Abstraction        | Hides implementation details       |
-| Interface          | Defines a contract                 |
-| Exception Handling | Handles runtime errors             |
-| Collections        | Stores/manages groups of objects   |
-| Generics           | Provides type safety               |
-| Stream API         | Processes collections              |
-| Multithreading     | Executes tasks concurrently        |
 
 
 

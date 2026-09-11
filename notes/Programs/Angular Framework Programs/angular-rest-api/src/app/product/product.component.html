@@ -1,10 +1,10 @@
-<div>
+<div class="container">
     <input type="button"
      value="Load Data"
-     (click)="loadFakeProducts()"/>
+     (click)="loadFakeProducts()" class="btn btn-success"/>
      <hr/>
      <div *ngIf="flag">
-     <table border="1">
+     <table border="1" class="table table-striped">
         <tr>
             <th>Id</th>
             <th>PName</th>
