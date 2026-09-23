@@ -839,6 +839,14 @@ What is an Exception?
 An exception is an abnormal condition that occurs during program execution 
 and disrupts the normal flow of the program.
 
+using some technique we need to handle generated exception ie is exception handling 
+
+                                        Java 
+
+    Compile  program                                                       Run program 
+    javac Demo.java                                                        java Demo 
+    syntax error or type error
+
 Compile-Time Error vs Runtime Error
 
 These are important concepts to distinguish.
@@ -853,9 +861,9 @@ public class Demo {
 
     public static void main(String[] args) {
 
-        int number = 10
+        int number = 10;
 
-        System.out.println(number);
+        System.out.println("Value of "+number);
     }
 }
 
@@ -883,7 +891,8 @@ Undefined variable
 Missing import
 Incorrect method arguments
 Unhandled checked exception
-3. Runtime Error
+
+Runtime Error
 
 A runtime error occurs after the program has successfully compiled and started executing.
 
@@ -915,7 +924,17 @@ Successful compilation
 JVM
     ↓
 Exception during execution
-4. Error vs Exception
+                                    Run time 
+Error : The error which generated at run time which we can't handle it. 
+JVM crash, out of memory or software/hardware issue. 
+
+Exception : it is a type of error which generate at run time which we can handle it. 
+
+Both are pre defined classes. part of lang package. by default every java program 
+import lang package. 
+
+
+Error vs Exception
 
 Java has a common hierarchy starting from Throwable.
 
@@ -925,13 +944,19 @@ Java has a common hierarchy starting from Throwable.
                   /         \
                Error       Exception
                 |              |
-        Serious problems    Exceptions
+        Serious problems    
                                |
                     ┌──────────┴──────────┐
                     ↓                     ↓
-          RuntimeException          Other Exceptions
-                    ↓
-             Unchecked
+                Checked Exception   Unchecked Exception
+
+                SQLException            RuntimeException 
+                IOException             |
+                FileNotFoundException   ArithmeticException 
+                                        NumberFormatException 
+                                        NullPointerException 
+
+
 
 More specifically:
 
@@ -944,13 +969,13 @@ Throwable
 │
 └── Exception
     │
-    ├── RuntimeException
+    ├── RuntimeException        (Un checked exception )
     │   ├── ArithmeticException
     │   ├── NullPointerException
     │   ├── ArrayIndexOutOfBoundsException
     │   └── NumberFormatException
     │
-    └── Other checked exceptions
+    └── Other checked exceptions        (checked exception)
         ├── IOException
         ├── SQLException
         └── ClassNotFoundException
@@ -975,6 +1000,7 @@ IOException
 SQLException
 ArithmeticException
 NullPointerException
+
 5. Types of Exceptions
 
 The two important categories are:
@@ -1020,6 +1046,15 @@ NumberFormatException
 
 The compiler does not require you to catch or declare them.
 
+To handle both checked as well as unchecked exception java provided 
+5 keyword 
+try
+catch 
+finally 
+throw 
+throws 
+
+
 6. try
 
 The try block contains code that may cause an exception.
@@ -1060,6 +1095,7 @@ Exception
 catch
  ↓
 Handle exception
+
 8. Multiple catch Blocks
 
 A single try can have multiple catch blocks.
@@ -1122,6 +1158,8 @@ catch (ArithmeticException e) {
 The second catch becomes unreachable because Exception already catches that exception type.
 
 9. finally
+finally block execute 100% sure doesn't matter exception generate or not. 
+
 
 The finally block is generally used for cleanup code.
 
@@ -1199,7 +1237,7 @@ finally → cleanup
 
 For resources such as files and database connections, try-with-resources is often preferable to manually closing them in finally.
 
-10. Unchecked Exception – ArithmeticException
+Unchecked Exception – ArithmeticException
 
 Occurs when an invalid arithmetic operation is performed.
 
@@ -1229,7 +1267,8 @@ public class ArithmeticDemo {
 Output:
 
 Cannot divide by zero
-11. Unchecked Exception – ArrayIndexOutOfBoundsException
+
+Unchecked Exception – ArrayIndexOutOfBoundsException
 
 Occurs when we access an array using an invalid index.
 
@@ -1265,7 +1304,7 @@ Valid indexes are:
 
 Index 5 does not exist.
 
-12. Multiple Unchecked Exceptions
+Multiple Unchecked Exceptions
 
 A practical example:
 
@@ -1312,9 +1351,14 @@ Execution completed
 
 Only the first exception encountered in the try block is thrown, so numbers[5] is not reached.
 
-13. throw
+throw
 
 The throw keyword is used when we explicitly want to throw an exception.
+that exception can be pre defined or user defined 
+syntax 
+throw new Exception();
+throw new ExceptionSubClass(); // it can be pre defined or user defined. 
+
 
 Example
 public class EmployeeDemo {
