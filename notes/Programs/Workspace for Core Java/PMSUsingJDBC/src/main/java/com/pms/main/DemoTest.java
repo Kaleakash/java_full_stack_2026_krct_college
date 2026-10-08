@@ -1,5 +1,6 @@
 package com.pms.main;
 
+import java.util.List;
 import java.util.Scanner;
 
 import com.pms.bean.Product;
@@ -17,7 +18,7 @@ public class DemoTest {
 		Scanner sc = new Scanner(System.in);
 		String con;
 		do {
-			System.out.println("1 : Add Product 2: Delete product 3 : Update Product");
+			System.out.println("1 : Add Product 2: Delete product 3 : Update Product 4: Display All Products");
 			System.out.println("Enter your choice");
 			int ch = sc.nextInt();
 			switch (ch) {
@@ -53,7 +54,12 @@ public class DemoTest {
 					result = ps.updateProductPrice(p2);
 					System.out.println(result);		
 					break;
-		
+			case 4 : System.out.println("All Product details");
+			       List<Product> listOfProduct = ps.getAllProducts(0.10f);
+			       for(Product p : listOfProduct) {
+			    	   System.out.println(p);
+			       }
+			       break;
 			default:System.out.println("Wrong choice");
 				break;
 			}

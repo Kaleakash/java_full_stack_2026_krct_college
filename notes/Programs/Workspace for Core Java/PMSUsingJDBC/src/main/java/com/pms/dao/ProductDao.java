@@ -3,6 +3,10 @@ package com.pms.dao;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
 
 import com.pms.bean.Product;
 import com.pms.resource.DbResouce;
@@ -57,5 +61,24 @@ public class ProductDao {
 		return 0;
 	}
 	
+	public List<Product> retrieveProduct() {
+		List<Product> listOfProduct = new ArrayList<Product>();
+		try {
+			Connection con = DbResouce.getConnection();
+			Statement stmt = con.createStatement();
+			ResultSet rs = stmt.executeQuery("select * from product");	// raw data in string format. 
+			// we need to convert each record into object. 
+			while(rs.next()) {
+				Product p = new Product();
+				p.setPid(rs.getInt(1)); 
+				p.setPname(rs.getString(2));
+				p.setPrice(rs.getFloat(3));
+				listOfProduct.add(p);
+			}
+		} catch (Exception e) {
+			System.out.println(e.toString());
+		}
+		return listOfProduct;
+	}
 	
 }
