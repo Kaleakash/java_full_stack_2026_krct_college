@@ -1,0 +1,5 @@
+# Created at 2026-10-08T09:48:18.993
+Boot Manifest-JAR contains absolute paths in classpath 'D:\KRCT-Java Full Stack Developer\KRCT Java Training\notes\Programs\maven project\SampleDemo\target\test-classes'
+Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
+'other' has different root
+

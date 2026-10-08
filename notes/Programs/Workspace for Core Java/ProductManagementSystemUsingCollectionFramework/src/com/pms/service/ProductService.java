@@ -8,7 +8,7 @@ import com.pms.bean.Product;
 
 public class ProductService {
 
-	List<Product> listOfProducts = new ArrayList<Product>();
+	List<Product> listOfProducts = new ArrayList<Product>();		// in memory 
 
 	public String addProduct(Product product) {
 		int temp = 0;
